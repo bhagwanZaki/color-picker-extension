@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h2>🎨 Color Picker</h2>
+
+    <div class="btnGrp">
+        <button id="pickBtn" class="main-btn">Pick</button>
+        <button id="mixerBtn" class="main-btn secondary">🎨</button>
+    </div>
+
+    <!-- Custom popover -->
+    <div id="mixerPopover" class="popover hidden">
+      <div class="popover-content">
+        <input type="color" id="popoverColor" />
+        <div class="popover-actions">
+          <button id="savePopoverBtn">Save</button>
+          <button id="cancelPopoverBtn" class="cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="grp">
+        <h3>Saved Colors</h3>
+        <button id="clearColor">Clear</button>
+    </div>
+    <div id="colorsList"></div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

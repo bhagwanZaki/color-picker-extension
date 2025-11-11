@@ -1,0 +1,157 @@
+body {
+  font-family: Arial, sans-serif;
+  width: 250px;
+  padding: 10px;
+  background: #fafafa;
+  position: relative;
+}
+
+h2,
+h3 {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.btnGrp {
+  display: flex;
+  gap: 8px;
+}
+
+.main-btn {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: background 0.2s;
+  flex: 1;
+}
+
+.main-btn:hover {
+  background: #0069d9;
+}
+
+.secondary {
+  flex: 0;
+  background: #6c757d;
+}
+
+.secondary:hover {
+  background: #5a6268;
+}
+
+/* Popover styles */
+.popover {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 10px 14px;
+  z-index: 999;
+  animation: fadeIn 0.15s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 5px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.popover-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.popover-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.popover-actions button {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#savePopoverBtn {
+  background: #28a745;
+  color: white;
+}
+
+#savePopoverBtn:hover {
+  background: #218838;
+}
+
+.cancel {
+  background: #dc3545;
+  color: white;
+}
+
+.cancel:hover {
+  background: #c82333;
+}
+
+/* Saved colors grid */
+#colorsList {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+}
+
+.color-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.coloritem {
+  border-radius: 8px;
+  padding: 2px 6px;
+  transition: transform 0.1s;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.coloritem:hover {
+  border-color: #999;
+}
+
+.grp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#clearColor{
+    cursor: pointer;
+    background-color: transparent;
+    color: gray;
+    font-weight: 700;
+    border: none;
+}
